@@ -1,80 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Escape Room - solve puzzles and find the exit">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escape Room</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="game-shell">
-      <header class="game-header">
-        <div>
-          <p class="eyebrow">The Locked Chapter</p>
-          <h1>Escape Room</h1>
-        </div>
-        <div class="stats" aria-label="Game statistics">
-          <span>Clues <strong id="clueCount">0/3</strong></span>
-          <span>Time <strong id="timer">10:00</strong></span>
-        </div>
-      </header>
+    <div id="escape-room">
+      <button data-name="door"><span>🚪</span></button>
+      <button data-name="wall-poster"><span>🌠</span></button>
+      <button data-name="desk-drawer"><span>🗂️</span></button>
+    </div>
 
-      <section class="room" aria-label="Escape room scene">
-        <div class="scene-light"></div>
-
-        <button class="prop painting" type="button" data-puzzle="painting" aria-label="Inspect the painting">
-          <span class="painting-frame"><span class="painting-sun"></span></span>
-        </button>
-
-        <button class="prop desk" type="button" data-puzzle="desk" aria-label="Search the desk">
-          <span class="desk-top"></span>
-          <span class="desk-leg left"></span>
-          <span class="desk-leg right"></span>
-        </button>
-
-        <button class="prop clock" type="button" data-puzzle="clock" aria-label="Examine the clock">
-          <span class="clock-face"><i></i></span>
-        </button>
-
-        <button class="prop door" type="button" data-puzzle="door" aria-label="Try the exit door">
-          <span class="door-window"></span>
-          <span class="door-knob"></span>
-        </button>
-
-        <aside class="inventory" aria-label="Collected clues">
-          <h2>Clues</h2>
-          <div id="inventoryList">
-            <span class="empty-clue">No clues found</span>
-          </div>
-        </aside>
-      </section>
-
-      <div id="puzzleModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
-        <div class="modal-card">
-          <button id="closeModal" class="close-button" type="button" aria-label="Close puzzle">&times;</button>
-          <p class="eyebrow">Room puzzle</p>
-          <h2 id="modalTitle"></h2>
-          <p id="modalText"></p>
-          <form id="puzzleForm">
-            <label for="puzzleAnswer" id="answerLabel">Answer</label>
-            <input id="puzzleAnswer" name="answer" autocomplete="off" required>
-            <button class="primary-button" type="submit">Check answer</button>
-          </form>
-          <p id="feedback" role="status"></p>
-        </div>
+    <div id="message-box">
+      <div id="message-title"><span>System Message</span></div>
+      <div id="message-description">
+        <span>Here you will find interesting details that help you move forward in the game</span>
       </div>
+    </div>
 
-      <div id="gameOverModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="gameOverTitle" hidden>
-        <div class="modal-card centered">
-          <p class="eyebrow">Game complete</p>
-          <h2 id="gameOverTitle"></h2>
-          <p id="gameOverText"></p>
-          <button id="restartButton" class="primary-button" type="button">Play again</button>
-        </div>
-      </div>
-    </main>
-
-    <script src="js/app.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
+
