@@ -24,9 +24,6 @@ python3 -m http.server 8000
 
 Then visit <http://localhost:8000>.
 
-## How to Play
+## Progress
 
-1. Search the painting, desk, and clock.
-2. Solve each puzzle to collect a clue.
-3. Inspect the door and enter the combined clue code.
-4. Escape before the 10-minute timer reaches zero.
+- [x] Day 1: Clickable room items with messages
